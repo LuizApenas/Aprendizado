@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Simples JavaScript</h1>
+    
+    <form id="formulario">
+        
+        <section>
+            <label for="numero1">Primeiro numero:</label>
+            <input type="number" id="numero1" placeholder="Digite aqui o primeiro numero">
+        </section>
+        
+        <section>
+            <label for="numero2">Segundo numero:</label>
+            <input type="number" id="numero2" placeholder="Digite aqui o segundo numero">
+        </section>
+        
+        <section>
+            <button type="button" id="somar">Somar</button>
+            <button type="button" id="subtrair">Subtrair</button>
+            <button type="button" id="multiplicar">Multiplicar</button>
+            <button type="button" id="dividir">Dividir</button>
+        </section>
+    
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+    const formulario = document.getElementById("formulario");
+    const resultado = document.getElementById("resultado");
+
+    formulario.addEventListener("submit", function(event){
+        event.preventDefault();
+    });
+    
+    function somar(){
+        const numero1 = parseInt(document.getElementById("numero1").value);
+        const numero2 = parseInt(document.getElementById("numero2").value);
+        resultado.innerHTML = "O Resultado de "+numero1+" + "+numero2+" é: "+(numero1 + numero2);
+    }
+
+    function subtrair(){
+        const numero1 = parseInt(document.getElementById("numero1").value);
+        const numero2 = parseInt(document.getElementById("numero2").value);
+        resultado.innerHTML = "O Resultado de "+numero1+" - "+numero2+" é: "+(numero1 - numero2);
+    }
+
+    function multiplicar(){
+        const numero1 = parseInt(document.getElementById("numero1").value);
+        const numero2 = parseInt(document.getElementById("numero2").value);
+        resultado.innerHTML = "O Resultado de "+numero1+" * "+numero2+" é: "+(numero1 * numero2);
+    }
+
+    function dividir(){
+        const numero1 = parseInt(document.getElementById("numero1").value);
+        const numero2 = parseInt(document.getElementById("numero2").value);
+        if(numero2 === 0) {
+            resultado.innerHTML = "Não é possível dividir por zero!";
+            return;
+        }
+        resultado.innerHTML = "O Resultado de "+numero1+" / "+numero2+" é: "+(numero1 / numero2);
+    }
+
+    document.getElementById("somar").onclick = somar;
+    document.getElementById("subtrair").onclick = subtrair;
+    document.getElementById("multiplicar").onclick = multiplicar;
+    document.getElementById("dividir").onclick = dividir;
+
+})
+
+    </script>
+</body>
+</html>

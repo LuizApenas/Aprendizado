@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Funções - Por favor pressionar F12 para abir o console</h1>
+    <script>
+        //Funcion anonima
+        const dobrar = function(numero){
+            return numero * 2;
+        }
+       
+       let numeros = [1, 2, 3, 4, 5, 213, 356, 222, 333, 444, 555];
+       //arrow function
+       const par = numeros.filter(numero => numero % 2 === 0);
+       console.log('Os numeros pares da seguinte lista: '+ numeros + ' São: ' + par);
+
+       //Funcion
+       function saudacao(nome){
+        return 'Olá, ' + nome + '!';
+       }
+
+       let nome = prompt('Digite seu nome:');
+       let mensagem = saudacao(nome);
+       console.log(mensagem);   
+       
+    </script>
+</body>

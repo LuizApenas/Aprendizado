@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova Pratica</title>
+</head>
+<body>
+    <h1>Por favor pressionar F12 para abir o console</h1>
+    <script>
+
+        const nomeAluno = prompt("Digite o nome do aluno:");
+
+        const nota1 = parseFloat(prompt(`Digite a 1ª nota de ${nomeAluno}:`));
+        const nota2 = parseFloat(prompt(`Digite a 2ª nota de ${nomeAluno}:`));
+        const nota3 = parseFloat(prompt(`Digite a 3ª nota de ${nomeAluno}:`));
+
+        const media = (nota1 + nota2 + nota3) / 3;
+
+        let resultado;
+        if (media >= 7) {
+        resultado = "APROVADO";
+        } else {
+        resultado = "REPROVADO";
+        }
+
+        console.log(`Aluno: ${nomeAluno}`);
+        console.log(`Notas: ${nota1.toFixed(1)}, ${nota2.toFixed(1)}, ${nota3.toFixed(1)}`);
+        console.log(`Média: ${media.toFixed(1)}`);
+        console.log(`Situação: ${resultado}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe Carro</title>
+</head>
+<body>
+    <h1>Atividade Classe Carro - Por favor pressionar F12 para abrir o console</h1>
+    <script>
+        class carro{
+            constructor(marca, modelo, ano){
+                this.marca = marca;
+                this.modelo = modelo;
+                this.ano = ano;
+            }
+            exibirveiculo(){
+                return `Marca: ${this.marca} Modelo: ${this.modelo} Ano: ${this.ano}`;
+            }	
+        }
+        let carro1 = new carro('Ford', 'Mustang', 2020);
+        console.log(carro1.exibirveiculo());
+
+        let carro2 = new carro('Chevrolet', 'Camaro', 2021);
+        console.log(carro2.exibirveiculo());
+        
+        
+    </script>
+</body>

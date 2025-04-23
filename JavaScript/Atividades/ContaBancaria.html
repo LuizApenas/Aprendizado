@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContaBancaria</title>
+</head>
+<body>
+    <h1>Atividade da ContaBancaria - Por favor pressionar F12 para abir o console</h1>
+    
+    <script>
+        
+        class ContaBancaria{
+            constructor(titular, saldo){
+                this.titular = titular;
+                this.saldo = saldo;
+            }
+            exibirConta(titular, saldo){
+                console.log(`Olá ${titular}, conta bancaria criada com sucesso, seu saldo atual é de R$${saldo}`)
+            }
+            depositar(valor){
+                this.saldo += valor;
+                console.log(`Deposito de ${valor} realizado com sucesso`);
+            }
+            sacar(valor){
+                if(valor > this.saldo){
+                    console.log("Saldo insuficiente");
+                }else{
+                    this.saldo -= valor;
+                    console.log(`Saque de ${valor} realizado com sucesso`)
+                }
+            }
+            consultarSaldo(titular){
+                console.log(`Olá ${titular} seu saldo atual é R$${this.saldo}`)
+
+            }
+            
+        }
+
+        const conta1 = new ContaBancaria('Luiz', 1000);
+        const conta2 = new ContaBancaria('Claudio', 50000);
+
+        conta1.exibirConta('Luiz', 1000);
+        conta1.sacar(700);
+        conta1.consultarSaldo('Luiz');
+        conta1.depositar(1200);
+        conta1.consultarSaldo('Luiz');
+
+        conta2.exibirConta('Claudio', 50000);
+        conta2.sacar(10000);
+        conta2.consultarSaldo('Claudio');
+        conta2.depositar(15000);
+        conta2.consultarSaldo('Claudio');
+
+    </script>
+</body>
+</html>

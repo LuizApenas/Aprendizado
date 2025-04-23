@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Arrays</title>
+</head>
+<body>
+    <h1>Manipulação de Arrays - Por favor pressionar F12 para abir o console</h1>
+    <script>
+        
+        let nomes = ["Luiz", "Claudio", "Cayke", "Erick", "Lucas"];
+
+        console.log('Lista de nomes:'+ nomes);
+
+        nomes.push("Cleiton");
+        nomes.unshift("Rogerio");
+
+        console.log('Lista de nomes Atualizada:' + nomes);
+
+        nomes.shift();  
+        nomes.pop();
+
+        console.log('Lista de nomes Atualizada:' + nomes);
+        
+        let nomesMaiusculos = nomes.map(nome => nome.toUpperCase());
+        console.log('Lista de nomes em Maiusculo:' + nomesMaiusculos);
+        
+    </script>
+</body>

@@ -1,0 +1,165 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18/03</title>
+</head>
+<body>
+    <h1>Aula 18/03</h1>
+    
+    <script>
+        
+    console.log(" \n ------------Arrays-----------------");
+
+    let numeros = [10, 20, 30, 40, 50];
+
+    console.log(numeros[0]); // 10
+
+    console.log(numeros.length); // 5
+
+
+
+    let frutas = ["Maçã", "Banana", "Laranja"];
+
+
+
+//Adicionando elementos:
+
+		frutas.push('Manga'); // No final
+
+		frutas.unshift('Uva'); // No início
+
+		console.log(frutas);
+
+//Removendo elementos:
+
+		frutas.pop(); // Remove o último
+
+		frutas.shift(); // Remove o primeiro
+
+
+		console.log(frutas);
+
+
+console.log(" \n ------------Principais métodos de manipulação de arrays-----------------");
+
+
+
+// Map, Filter, Reduce
+
+let numerosDobro = numeros.map(num => num * 2);
+
+let numerosFiltrados = numeros.filter(num => num > 20);
+
+let soma = numeros.reduce((total, num) => total + num, 0);
+
+
+
+console.log(numerosDobro);
+
+console.log(numerosFiltrados);
+
+console.log(soma);
+
+
+
+console.log(" \n ------------Funções-----------------");
+
+
+
+function saudacao(nome) {
+
+    return `Olá, ${nome}!`;
+
+}
+
+console.log(saudacao("Claudio"));
+
+
+
+console.log(" \n ------------Função anônima e Arrow Function-----------------");
+
+const somar = function(a, b) {
+
+    return a + b;
+
+};
+
+console.log(somar(5, 10));
+
+
+
+const multiplicar = (a, b) => a * b;
+
+console.log(multiplicar(3, 4));
+
+
+
+function processaNumero(numero, callback) {
+
+  	return callback(numero);
+
+}
+
+console.log(processaNumero(16, (num) =>  (num * 3) - (num / 2) ) );
+
+
+
+console.log(" \n ------------Objetos-----------------");
+
+
+
+const pessoa = {
+
+    nome: "Claudio",
+
+    idade: 25,
+
+    falar: function() {
+
+        console.log(`Meu nome é ${this.nome}`);
+
+    }
+
+};
+
+pessoa.falar();
+
+
+
+
+
+console.log(" \n ------------Classes e Instâncias-----------------");
+
+class Animal {
+
+    //constructor é uma função que cria e inicializa objetos a partir de uma classe
+
+    constructor(nome, tipo) {
+
+        this.nome = nome;
+
+        this.tipo = tipo;
+
+    }
+
+    descrever() {
+
+        return `${this.nome} é um ${this.tipo}`;
+
+    }
+
+}
+
+const cachorro = new Animal("Rex", "Cachorro");
+
+console.log(cachorro.descrever());
+
+const gato = new Animal("Tomas", "Gato");
+
+console.log(gato.descrever());
+
+
+    </script>
+</body>
+</html>
