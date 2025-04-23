@@ -15,8 +15,6 @@ Manipulação do DOM e interação com o usuário
 
 Tratamento de eventos (click, input, form)
 
-Consumo de APIs REST (fetch / async-await)
-
 Estruturação de código modular (módulos ES)
 
 Lógica assíncrona e Promises
