@@ -1,0 +1,63 @@
+/* ProgramaçãoWebProva/css/login.css */
+
+/* Login form container specific styles */
+#loginForm {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff; /* Ensures white background if main changes */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Input field containers */
+#loginForm div {
+    margin-bottom: 1rem;
+}
+
+/* Labels for input fields */
+#loginForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input fields (text and password) */
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#loginForm input[type="text"]:focus,
+#loginForm input[type="password"]:focus {
+    border-color: #5cb85c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 184, 92, 0.5);
+}
+
+/* Error message paragraph */
+.error-message {
+    color: #d9534f; /* Bootstrap danger color */
+    font-size: 0.9rem;
+    margin-top: 10px;
+    min-height: 1em; /* Reserve space to prevent layout shift */
+}
+
+/* Responsive adjustments for the login form */
+@media (max-width: 480px) {
+    #loginForm {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    #loginForm input[type="text"],
+    #loginForm input[type="password"] {
+        font-size: 0.9rem;
+    }
+} 

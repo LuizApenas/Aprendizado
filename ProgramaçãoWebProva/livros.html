@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros - Biblioteca Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/livros.css">
+    <!-- ProgramaçãoWebProva/livros.html -->
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Livros</h1>
+        <button id="logoutButton" class="btn">Sair</button>
+    </header>
+    <main>
+        <section id="controls">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar livros...">
+            </div>
+            <button id="addBookModalButton" class="btn">Adicionar Livro</button>
+        </section>
+
+        <section id="bookList">
+            <!-- Os livros serão inseridos aqui pelo JavaScript -->
+        </section>
+
+        <!-- Modal para adicionar livro -->
+        <div id="addBookModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Adicionar Novo Livro</h2>
+                <form id="addBookForm">
+                    <div>
+                        <label for="title">Título:</label>
+                        <input type="text" id="title" required>
+                    </div>
+                    <div>
+                        <label for="author">Autor:</label>
+                        <input type="text" id="author" required>
+                    </div>
+                    <div>
+                        <label for="genre">Gênero:</label>
+                        <input type="text" id="genre" required>
+                    </div>
+                    <button type="submit" class="btn">Salvar Livro</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Biblioteca Online. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/dados.js"></script>
+    <script src="js/livros.js"></script>
+</body>
+</html> 

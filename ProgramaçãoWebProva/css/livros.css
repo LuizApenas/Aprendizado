@@ -1,0 +1,193 @@
+/* ProgramaçãoWebProva/css/livros.css */
+
+/* Header on books page */
+body > header { /* Targeting only the main page header, not modal headers */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px; /* Adjust padding for main element's max-width */
+}
+
+/* Ensure main header h1 and logout button are aligned within the max-width */
+body > header h1,
+body > header #logoutButton {
+    margin: 0; /* Reset default margins */
+}
+
+/* Controls section for search and add button */
+#controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 250px; /* Fixed width for search input */
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #5cb85c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 184, 92, 0.5);
+}
+
+/* Book list styles */
+#bookList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.book-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: space-between; /* Push button to bottom */
+}
+
+.book-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #337ab7; /* A pleasant blue for titles */
+}
+
+.book-item p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 3px;
+    flex-grow: 1; /* Allow paragraph to take up space */
+}
+
+.book-item .remove-btn {
+    background-color: #d9534f;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    align-self: flex-start; /* Align button to the start of the flex item */
+    margin-top: 10px; /* Space above button */
+    transition: background-color 0.3s ease;
+}
+
+.book-item .remove-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#addBookForm div {
+    margin-bottom: 1rem;
+}
+
+#addBookForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#addBookForm input[type="text"] {
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#addBookForm input[type="text"]:focus {
+    border-color: #5cb85c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 184, 92, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body > header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    body > header #logoutButton {
+        margin-top: 10px;
+    }
+
+    #controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-container input[type="text"] {
+        width: calc(100% - 22px); /* Adjust for padding/border */
+        margin-bottom: 10px;
+    }
+
+    #addBookModalButton {
+        width: 100%;
+    }
+
+    #bookList {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .modal-content {
+        margin: 20% auto; 
+        width: 90%;
+    }
+} 
